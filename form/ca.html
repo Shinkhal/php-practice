@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yoga Day Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        div {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            font-size: 16px;
+            color: #555;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+        }
+        input[type="text"], input[type="email"], input[type="tel"] {
+            width: 48%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="radio"] {
+            margin: 0 10px;
+        }
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+        input[type="submit"], input[type="reset"] {
+            background-color: #28a745;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        input[type="reset"] {
+            background-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form action="ca.php" method="post">
+            <h1>Yoga Day Registration Form</h1>
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <div class="flex-container">
+                    <input type="text" name="first" id="first" placeholder="First Name" required>
+                    <input type="text" name="last" id="last" placeholder="Last Name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" name="email" id="email" placeholder="example@mail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="1234567890">
+            </div>
+            <div class="form-group">
+                <p>Yoga Experience Level</p>
+                <div class="radio-group">
+                    <label><input type="radio" name="experience" value="beginner"> Beginner</label><br>
+                    <label><input type="radio" name="experience" value="intermediate"> Intermediate</label><br>
+                    <label><input type="radio" name="experience" value="advance"> Advance</label>
+                </div>
+            </div>
+            <input type="submit" value="Submit">
+            <input type="reset" value="Clear Choice">
+        </form>
+    </div>
+</body>
+</html>

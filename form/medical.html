@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Symposium Registration Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #474343;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        form {
+            margin-top: 50px;
+            width: 500px;
+            height: 600px;
+            background-color: white;
+            padding: 30px;
+            border: 2px solid #000;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #126c5a;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .name-fields {
+            display: flex;
+            gap: 10px;
+        }
+        .name-fields input {
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+    <form action="medical.php" method="post">
+        <h2>Medical Symposium Registration Form</h2>
+        <div>
+            <label for="name">Full Name:</label>
+            <div class="name-fields">
+                <select name="title" id="title">
+                    <option value="title">title</option>
+                    <option value="mr">Mr.</option>
+                    <option value="mrs">Mrs.</option>
+                </select>
+                <input type="text" name="first" id="first" placeholder="First Name">
+                <input type="text" name="last" id="last" placeholder="Last Name">
+            </div>
+        </div>
+        <div>
+            <label for="institution">Institution:</label>
+            <input type="text" name="institution" id="institution" placeholder="Institution">
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email">
+        </div>
+        <div>
+            <label for="organizer">Name of Organizer(s):</label>
+            <input type="text" name="organizer" id="organizer" placeholder="Organizer's Name">
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

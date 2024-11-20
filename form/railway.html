@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Railway Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(to right, #e0f7fa, #80deea);
+        }
+        form {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            width: 100%;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        select {
+            padding: 12px;
+            margin-top: 5px;
+            border: 1px solid #b2dfdb;
+            border-radius: 6px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        input[type="date"]:focus,
+        select:focus {
+            border-color: #00796b;
+            outline: none;
+        }
+
+        .payment-method {
+            margin-top: 10px;
+        }
+
+        input[type="radio"] {
+            margin-right: 8px;
+        }
+
+        input[type="submit"] {
+            background-color: #00796b;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 6px;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #004d40; /* Darker shade for hover */
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+          form {
+              padding: 15px; /* Adjust padding for smaller screens */
+          }
+          h1 {
+              font-size: 24px; /* Smaller font size for headings */
+          }
+          input[type="submit"] {
+              font-size: 14px; /* Smaller button text */
+          }
+      }
+    </style>
+</head>
+<body>
+    <form action="railway.php" method="post">
+        <h1>Railway Registration Form</h1>
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <br>
+        <label for="contact">Contact:</label>
+        <input type="number" name="Contact" id="contact" required>
+        <br>
+        <label for="departure">Departure Station:</label>
+        <input type="text" name="departure" id="departure" required>
+        <br>
+        <label for="destination">Destination Station:</label>
+        <input type="text" name="destination" id="destination" required>
+        <br>
+        <label for="date">Date of Journey:</label>
+        <input type="date" name="date" id="date" required>
+        <br>
+        <label for="class">Class:</label>
+        <select name="class" id="class">
+            <option value="1a">1A</option>
+            <option value="2a">2A</option>
+            <option value="3a">3A</option>
+        </select>
+        <br>
+        <label for="passenger">Number of Passengers:</label>
+        <input type="number" name="passenger" id="passenger">
+        <br>
+        <div class="payment-method">
+            <span>Payment Method:</span><br>
+            <input type="radio" name="payment" value="cash" id="cash">
+            <label for="cash">Cash</label><br>
+            
+            <input type="radio" name="payment" value="credit" id="credit">
+            <label for="credit">Credit Card</label><br>
+            <input type="radio" name="payment" value="debit" id="debit">
+            <label for="credit">Debit Card</label><br>
+            <input type="radio" name="payment" value="upi" id="upi">
+            <label for="credit">UPI</label><br>
+         </div>
+
+         <input type = "submit" value = "Book Ticket">
+     </form>
+ </body>
+ </html>

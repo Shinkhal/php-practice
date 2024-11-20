@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+        form {
+            border: 1px solid black;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 500px;
+        }
+        input {
+            margin: 5px ;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="3.php">
+        <h1>Enetr your details</h1>
+        Name : <br>
+        <input type="text" name="name"><br>
+        Email : <br>
+        <input type="text" name="email"><br>
+        Skills : <br>
+        <input type="checkbox" name="Java" id="java">
+        <label for="java">Java</label>
+        <br>
+        <input type="checkbox" name="php" id="php">
+        <label for="php">php</label><br>
+        <input type="checkbox" name="python" id="python">
+        <label for="python">Python</label><br>
+        <input type="checkbox" name="Javascript" id="Javascript">
+        <label for="Javascript">Javascript</label><br>
+        Mobile : <br>
+        <input type="number" name="mobile" id="mobile"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
