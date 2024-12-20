@@ -1,31 +1,5 @@
-<!-- <?php
-function transposeMatrix($matrix) {
-    $transposedMatrix = array();
-    foreach ($matrix as $row => $cols) {
-        foreach ($cols as $col => $val) {
-            $transposedMatrix[$col][] = $val;
-        }
-    }
-    return $transposedMatrix;
-}
 
-function printMatrix($matrix) {
-    foreach ($matrix as $row) {
-        echo implode(" ", $row) . "<br>";
-    }
-}
-
-$matrix = array(
-    array(1, 2, 3),
-    array(4, 5, 6),
-    array(7, 8, 9)
-);
-
-$transposedMatrix = transposeMatrix($matrix);
-
-printMatrix($transposedMatrix);
-?> -->
-
+<!-- 
 <html>
     <body>
         <?php
@@ -47,4 +21,35 @@ printMatrix($transposedMatrix);
             }
         ?>
     </body>
-</html>
+</html> -->
+
+<?php
+function transposeMatrix($matrix) {
+    $transposed = [];
+    foreach ($matrix as $rowIndex => $row) {
+        foreach ($row as $colIndex => $value) {
+            $transposed[$colIndex][$rowIndex] = $value;
+        }
+    }
+    return $transposed;
+}
+
+// Example usage
+$matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];
+
+echo "Original Matrix:<br>";
+foreach ($matrix as $row) {
+    echo implode(' ', $row) . "<br>";
+}
+
+$transposed = transposeMatrix($matrix);
+
+echo "<br>Transposed Matrix:<br>";
+foreach ($transposed as $row) {
+    echo implode(' ', $row) . "<br>";
+}
+?>

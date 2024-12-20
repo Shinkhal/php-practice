@@ -7,24 +7,15 @@
 </head>
 <body style="font-family: Arial, sans-serif; background-color: #f4f4f4; padding: 20px;">
     <?php
-    // Define variables and set to empty values
-    $name = $email = $gender = $comment = $website = '';
-
-    // Function to sanitize input data
-    function test_input($data) {
-        $data = trim($data);
-        $data = stripslashes($data);
-        $data = htmlspecialchars($data);
-        return $data;
-    }
+  
 
     // Check if the form is submitted
     if ($_SERVER['REQUEST_METHOD'] == "POST") {
-        $name = test_input($_POST['name']);
-        $email = test_input($_POST['email']);
-        $website = test_input($_POST['website']);
-        $comment = test_input($_POST['comment']);
-        $gender = test_input($_POST['gender']);
+        $name = ($_POST['name']);
+        $email = ($_POST['email']);
+        $website = ($_POST['website']);
+        $comment = ($_POST['comment']);
+        $gender =  ($_POST['gender']);
     }
     ?>
 

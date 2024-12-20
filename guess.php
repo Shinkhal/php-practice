@@ -1,10 +1,10 @@
 <html>
 <body>
-<title>Shinkhal Sinha 766ec684 </title>
+<title>Pranjal Thakur 47a78e2b </title>
 <h1> Welcome to my guessing game</h1>
 
 <?php
-$correctnumber=46; //change this number //
+$correctnumber=25;
 if(isset($_GET['guess']))
 {
   if (is_numeric($_GET['guess'])===FALSE)

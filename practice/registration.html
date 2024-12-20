@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        form h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        input[type="text"], input[type="email"], input[type="password"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .error-message, .success-message {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 4px;
+        }
+        .error-message {
+            background-color: #ffdddd;
+            color: #d8000c;
+        }
+        .success-message {
+            background-color: #ddffdd;
+            color: #4caf50;
+        }
+    </style>
+</head>
+<body>
+    <form action="registration.php" method="post">
+        <h1>Registration Form</h1>
+
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name">
+
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" placeholder="Enter your password">
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

@@ -1,9 +1,9 @@
 <?php
 include "conn.php"; 
 
-// Check if the form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Get form data
+
+    
     $name = $_POST['name'];
     $email = $_POST['email'];
     $contact = $_POST['Contact'];
